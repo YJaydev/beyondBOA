@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>manual screen</title>
+</head>
+<body>
+<form action="update" method="post">
+    {% csrf_token %}
+    <ul>
+        <li>
+            <label for="Testcase Name">Testcase Id: </label>
+            <input id="Testcase Name" type="text" name="Testcase Name"></li>
+
+        <li><label for="Column Name">Column Name: </label>
+            <input id="Column Name" type="text" name="Column Name"></li>
+
+        <li><label for="Column value">New column value: </label>
+            <input id="Column value" type="text" name="Column value"></li>
+        <li>
+            <label for="Testcase Name">Testcase Id: </label>
+            <input id="Testcase Name" type="text" name="Testcase Name"></li>
+
+        <li><label for="Column Name">Column Name: </label>
+            <input id="Column Name" type="text" name="Column Name"></li>
+
+        <li><label for="Column value">New column value: </label>
+            <input id="Column value" type="text" name="Column value"></li>
+
+        <input type="submit" value="Submit">
+    </ul>
+
+</form>
+
+<h1>Metadata in this Template</h1>
+</body>
+</html>
+

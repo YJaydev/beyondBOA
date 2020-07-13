@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>{{ title }}</title>
+    <style type="text/css">
+        body {
+            background: rgba(0, 247, 255, 0.2);
+        }
+
+        table, th, td {
+            font-weight: 500;
+            font-size: 10pt;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(0, 128, 0, 0.2);
+        }
+
+        th, td, h1 {
+            padding: 10px;
+            font-family: Verdana, sans-serif;
+        }
+
+        .Missing_Data tr:first-child td {
+            font-weight: 600;
+            color: Grey;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1 style="color:DarkSlateGray;text-align:center;margin-left:auto;margin-right:auto;padding: 10px;">
+    Editable Meta Data Library
+</h1>
+
+{#<table id="myTable" border="1" style="align-self: center;" class="dataframe Editable_Data">#}
+{#<tbody>{% for items in data %}#}
+{#    <th>#}
+{#        {% for k,item in items %}#}
+{#          <td> {{ k}}</td>{% endfor %}#}
+{##}
+{#    </th>{% endfor %}#}
+{#</tbody>#}
+{#</table>#}
+{#<table>#}
+{#    <tbody>#}
+{#        {% for key, value in data.items %}#}
+{#            <th>{{key}}#}
+{##}
+{##}
+{#            </th>#}
+{##}
+{#        {% endfor %}#}
+{#    </tbody>#}
+{#<tbody>#}
+{#        {% for value in data.items %}#}
+{#            <tr>{% for items in value %}</tr>#}
+{#                <td>{{ items }}</td>{% endfor %}#}
+{##}
+{#        {% endfor %}#}
+{#    </tbody>#}
+{#</table>#}
+
+
+{#<table id="myTable" border="1" style="align-self: center;" class="dataframe Editable_Data">#}
+{#  <tbody>#}
+{#    <tr>#}
+{#        {% for key in data.keys %}#}
+{#            <th>{{key}}</th>#}
+{#        {% endfor %}#}
+{#    </tr>#}
+{#  <tr>#}
+{#    {% for value in data.values %}#}
+{#        <tr>#}
+{#         {% for v,k in value.items %}#}
+{#           <td>{{ k }}</td>#}
+{#         {% endfor %}#}
+{#       </tr>#}
+{#    {% endfor %}#}
+{#    </tr>#}
+{#  </tbody>#}
+{#</table>#}
+
+
+<table id="myTable" border="1" style="align-self: center;" class="dataframe Editable_Data">
+    <tbody>
+    <tr>
+        {% block content %}
+            {% for key in data.keys %}
+                <th>{{ key }}</th>
+            {% endfor %}
+            </tr>
+
+            {#                {% for key in data.values.count %}#}
+            {#                    <tr>#}
+            {#                        {% for value in data.values %}#}
+            {#                            {% for val in value %}#}
+            {#                                <td>{{ val.0 }} </td>#}
+            {#                                {% endfor %}#}
+            {#                        {% endfor %}#}
+            {#                    </tr>#}
+            {#                {% endfor %}#}
+            <tr>{% for key, value in data.items %}
+                <td>{{ value.0 }}
+                </td>{% endfor %}
+            </tr>
+            <tr>{% for key, value in data.items %}
+                <td>{{ value.1 }}
+                </td>{% endfor %}
+            </tr>
+            <tr>{% for key, value in data.items %}
+                <td>{{ value.2 }}
+                </td>{% endfor %}
+            </tr>
+            <tr>{% for key, value in data.items %}
+                <td>{{ value.3 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.4 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.5 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.6 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.7 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.8 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.9 }}
+                </td>{% endfor %}
+            </tr>
+            <tr>{% for key, value in data.items %}
+                <td>{{ value.10 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.11 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.12}}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.13}}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.14 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.15 }}
+                </td>{% endfor %}
+            </tr><tr>{% for key, value in data.items %}
+                <td>{{ value.16 }}
+                </td>{% endfor %}
+            </tr>
+        {% endblock %}
+    </tbody>
+</table>
+
+
+</body>
+<form>
+{#    <input type="button" onclick="changeContent()" value="Change content">#}
+{#    <a href="http://127.0.0.1:8000/manualscreen/update/">Update Data</a>#}
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<script>
+    {#function changeContent() {#}
+    {#    row_num = window.prompt("Input the Row number()", "1");#}
+    {#    col_num = window.prompt("Input the Column number()", "1");#}
+    {#    content = window.prompt("Input the Cell content");#}
+    {#    var x = document.getElementById('myTable').rows[parseInt(row_num - 1, 10)].cells;#}
+    {#    x[parseInt(col_num - 1, 10)].innerHTML = content;#}
+
+</script>
+</html>
+
+
+{##}
+{# <tr>#}
+{#                {% for values,key in data.items %}#}
+{#                    <td>{{ key.0 }} </td>#}
+{#                {% endfor %}#}
+{#            </tr>#}

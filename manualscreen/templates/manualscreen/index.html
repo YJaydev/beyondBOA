@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>manual screen</title>
+</head>
+<body>
+<form action = "update" method = "post">
+    {% csrf_token %}
+
+    <label for="Testcase Name">Testcase Id: </label>
+    <input id="Testcase Name" type="text" name="Testcase Name">
+
+    <label for="Column Name">Column Name: </label>
+    <input id="Column Name" type="text" name="Column Name">
+
+    <label for="Column value">New column value: </label>
+    <input id="Column value" type="text" name="Column value">
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<h1> Changing Data in this Template</h1>
+</body>
+</html>
+
